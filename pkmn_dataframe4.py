@@ -1,5 +1,12 @@
 import pandas as pd
 
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
+
+# alternatively
+#pd.options.display.max_columns = None
+#pd.options.display.max_rows = None
+
 #
 # creating the pokemon data frame
 #
@@ -72,6 +79,12 @@ import re
 #pkmn_df.loc[pkmn_df['Type 1'] == 'Fire', 'Legendary'] = True
 #print(pkmn_df.loc[pkmn_df['Type 1'] == 'Fire'])
 
+new_df = pd.read_csv('modified_pokemon_data.csv')
 # changing multiple sections based on condition
-pkmn_df.loc[pkmn_df['Total'] > 600, ['Generation,' 'Legendary']] = 'TEST VALUE'
-print(pkmn_df)
+#new_df.loc[new_df['Total'] > 600, ['Generation', 'Legendary']] = 'TEST VALUE'
+#print(new_df)
+
+# changing multiple sections based on condition individually
+#new_df.loc[new_df['Total'] > 600, ['Generation', 'Legendary']] = ['TEST 1', 'TEST 2']
+#print(new_df)
+
